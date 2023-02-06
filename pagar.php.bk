@@ -1,0 +1,537 @@
+<?php
+
+    include_once('includes/header.php');
+    include_once('includes/nav-bar.php');
+    require __DIR__ .  '/mercadopago/vendor/autoload.php';
+
+    $load = null;
+    $tk = isset($_SESSION['cart']['v_payment']['transaction_key']) ? $_SESSION['cart']['v_payment']['transaction_key'] : '';
+
+    if(isset($_GET['load']) && $_GET['load'] === 'verifyData') {
+        $load = true;
+    }
+    if(isset($_GET['load']) && $_GET['load'] === 'pay') {
+        $load = false;
+    }
+
+    /* ERROR GENERAL */
+        if($load === null || count($_POST) === 0) {
+            echo "
+                <script src='https://unpkg.com/sweetalert/dist/sweetalert.min.js'></script>
+                <script>
+                    Swal.fire({
+                        title: 'Error al realizar el pago',
+                        text: 'Hubo un error por favor intenta nuevamente o agrega un nuevo curso',
+                        buttons: ['Agregar Curso']
+                    })
+                    .then(value => {
+                        window.location.href='/my_cart.php';
+                    });
+                </script>
+            ";
+            exit;
+        }
+
+    /* NO HAY CURSOS AGREGADOS */
+        if(!isset($_SESSION['cart']) || count($_SESSION) === 0 || is_null($_SESSION['cart'])) {
+            echo "
+                <script src='https://unpkg.com/sweetalert/dist/sweetalert.min.js'></script>
+                <script>
+                    Swal.fire({
+                        title: 'No hay items agregados',
+                        text: 'Por favor agrega un curso o seminario para continuar',
+                        buttons: ['Agregar Curso']
+                    })
+                    .then(value => {
+                        window.location.href='/my_cart.php';
+                    });
+                </script>
+            ";
+            exit;
+        }
+
+    /* USUARIO NO AUTENTICADO */
+        if(!$auth) {
+            echo "
+                <script src='https://unpkg.com/sweetalert/dist/sweetalert.min.js'></script>
+                <script>
+                    swal({
+                        title: 'Debes Iniciar Sesión',
+                        text: 'Por favor inicia sesión o crea una cuenta nueva para continuar',
+                        buttons: [
+                            'Crear Cuenta',
+                            'Iniciar Sesión'
+                        ]
+                    })
+                    .then(value => {
+                        if(value){
+                            window.location.href='/plataforma/login';
+                        }else {
+                            window.location.href='/plataforma/registro';
+                        }
+                    });
+                </script>                
+            ";
+            exit;
+        }
+
+    if($_POST !== NULL && count($_POST) > 0) {
+
+        $pay = new Payment;
+        $usu = new User;
+        $pai = new Pais;
+        $sus = new Suscripcion;
+
+        $total = 0;
+        $email = $_SESSION['auth_user']['email'];
+        $SID = $tk !== '' ? $tk : session_id();
+        $data_payment = [];
+        $entity = $money === 'USD' ? 'Paypal' : 'Mercadopago';
+        $asesor = isset($_POST['asesor']) ? $_POST['asesor'] : '';
+
+        if(!$load && !isset($_GET['step'])) {
+
+            $total = $_SESSION['cart']['price'];
+
+            $data_payment = [
+                'transaction_key' => $SID,
+                'email' => $email,
+                'quantity' => $_SESSION['cart']['quantity'],
+                'total' => $total,
+                'entity' => $entity,
+                'course_name' => $_SESSION['cart']['name'],
+                'course_code' => $_SESSION['cart']['code'],
+                'grupo' => $_SESSION['cart']['grupo'],
+                'price' => $_SESSION['cart']['price'],
+                'modality' => $_SESSION['cart']['modality'],
+                'asesor' => $asesor
+            ];
+
+                /* Agregar Detalles de Nuevo Pago */
+            $pay->transaction_key = $data_payment['transaction_key'];
+            $pay->course_code = $data_payment['course_code'];
+            $pay->course_name = $data_payment['course_name'];
+            $pay->price = $data_payment['price'];
+            $pay->modality = $data_payment['modality'];
+
+            $tk !== '' ?: $pay->setPaymentDetails();
+
+                /* Agregar Pago Nuevo */
+            $pay->email = $data_payment['email'];
+            $pay->quantity = $data_payment['quantity'];
+            $pay->total = $data_payment['total'];
+            $pay->entity = $data_payment['entity'];
+            $pay->asesor = $asesor;
+
+                $tk !== '' ?: $pay->addPayment();
+
+            $usu->nombre = $_SESSION['auth_user']['nombre'];
+            $usu->apellido = $_SESSION['auth_user']['apellido'];
+            $usu->pais = (isset($_POST['pais']) && $_POST['pais'] !== '') ? $_POST['pais'] : '';
+            $usu->telefono = $_SESSION['auth_user']['telefono'] === '' ? $_POST['telefono'] : $_SESSION['auth_user']['telefono'];
+            $usu->email = $_SESSION['auth_user']['email'];
+
+                $usu->update();
+
+            $_SESSION['cart']['v_payment'] = [
+                'transaction_key' => $SID,
+                'id' => $pay->getIdPayment($SID)['id'],
+                'total' => $total
+            ];
+
+                /* Verificar si ya tiene registrado el curso y está activo */
+                    $sus->codigo_curso = $data_payment['course_code'];
+                    $sus->email = $data_payment['email'];
+
+                    $existentReg = $sus->getExistent();
+
+                    if($existentReg) {
+                        
+                        if($existentReg['status'] === 'active') {
+
+                            unset($_SESSION['cart']);
+
+                            echo "
+                                <script src='https://unpkg.com/sweetalert/dist/sweetalert.min.js'></script>
+                                <script>
+                                    Swal.fire({
+                                        title: 'Suscripción Activa',
+                                        text: 'Ya tienes esta suscripción activa',
+                                        buttons: ['Aceptar']
+                                    })
+                                    .then(value => {
+                                        window.location.href='/plataforma';
+                                    });
+                                </script>
+                            ";
+                            exit;
+
+                        }
+
+                        $activateSub = true;
+
+                    }
+        }
+    }
+?>
+<body>
+
+    <?php if($load) : 
+        $usuario = $usu->getByEmail($email);
+        $paises = $pai->getPaises();
+    ?>
+
+        <div class="py-3 jumbotron container text-center d-flex flex-column justify-content-center" style="height:80vh">
+            <h4 class="title">Verifica tus datos para finalizar la compra</h4>
+            <hr>
+            <div class="container verify-data-form">
+                <form class="d-flex flex-wrap" action="/pagar.php?load=pay<?php echo ($_SESSION['cart']['code'] < '2' && $country === 'Argentina') ? '&step=load-mail' : '' ?>" method="post" autocomplete="off">
+                    <div class="form-group input-icon-left text-center col-12 col-sm-6">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" class="form-control text-center" placeholder="Ingresa tu nombre" value="<?php echo $usuario['nombre'] ?>" required autofocus/>
+                    </div>
+                    <div class="form-group input-icon-left text-center col-12 col-sm-6">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" name="apellido" class="form-control text-center" placeholder="Ingresa tu apellido" value="<?php echo $usuario['apellido'] ?>" required autofocus/>
+                    </div>
+                    <div class="form-group input-icon-left text-center col-12 col-sm-6">
+                        <label for="pais">Pais de Residencia</label>
+                        <select name="pais" id="pais" class="form-control text-center">
+                            <option disabled value="" <?php echo $usuario['pais'] === '' ? 'selected' : '' ?>>País de residencia</option>
+                            <?php foreach($paises as $pais) : ?>
+                                <option value="<?php echo $pais['nombre'] ?>" <?php echo $pais['nombre'] === $usuario['pais'] ? 'selected' : '' ?>> <?php echo $pais['nombre'] ?> </option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                    <div class="form-group input-icon-left text-center col-12 col-sm-6">
+                        <label for="telefono">Número de Telefono</label>
+                        <input type="text" id="telefono" name="telefono" class="form-control text-center" placeholder="Ingresa tu teléfono" value="<?php echo $usuario['telefono'] ?>" required autofocus/>
+                    </div>
+                    <div class="form-group input-icon-left text-center col-12 col-sm-6">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" class="form-control text-center" placeholder="Ingresa tu usuario" value="<?php echo $usuario['email'] ?>" required autofocus/>
+                    </div>
+                    <div class="form-group input-icon-left text-center col-12 col-sm-6">
+                        <label for="asesor">¿Qué asesor lo atendió?</label>
+                        <select name="asesor" id="asesor" class="form-control text-center" required autofocus>
+                            <option disabled value="" selected>Nombre del Asesor</option>
+                            <option value ="n/a">Ninguno</option>
+                            <option value ="Boris de Rives">Boris de Rives</option>
+                            <option value="Pablo Banderas">Pablo Banderas</option>
+                            <option value="Sion Laingboro">Sion Laingboro</option>
+                        </select>
+                    </div>
+                    <div class="form-group input-icon-left text-center col-12 justify-center">
+                        <input type="hidden" id="money" name="money" value="<?php echo $money ?>">
+                        <input type="hidden" id="activateSub" name="activateSub" value="<?php echo isset($activateSub) ? $activateSub : false ?>">
+                        <input type="hidden" id="email" name="email" value="<?php echo $_SESSION['auth_user']['email'] ?>">
+                        <button type="submit" id="btn-verify-data-payment" name="btn-login" class="btn btn-block btn-primary col-12 col-sm-6 mx-auto">Continuar con el pago <i class="fas fa-shopping-bag"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    <?php elseif(!$load && isset($_GET['step']) && $_SESSION['cart']['code'] < '2') : ?>
+
+        <!-- VERIFICAR CUENTA DE MERCADOPAGO -->
+            <div class="py-3 container text-center d-flex flex-column justify-content-center">
+                <div class="formulario-pago-premium">
+                    <h4 class="title">Verificación de correo MercadoPago</h4>
+                    <hr>
+                    <div class="alert alert-warning" role="alert">
+                        <p>Para generar el débito automático mensual es necesario que ingrese una cuenta de correo de MercadoPago existente</p>
+                    </div>
+                    <div class="logo">
+                        <img src="/img/icons-img/logo_mp.png" alt="Logo MercadoPago" width="150px">
+                    </div>
+                    <div class="formulario col-12 col-sm-9 mx-auto">
+                        <form action="/pagar.php?load=pay" id="mercadopago-form" method="POST">
+                            <input type="hidden" id="telefono" name="telefono" value="<?php echo $_POST['telefono'] ?>">
+                            <input type="hidden" id="asesor" name="asesor" value="<?php echo $_POST['asesor'] ?>">
+                            <input type="hidden" id="pais" name="pais" value="<?php echo $_POST['pais'] ?>">
+                            <div class="form-group col-12 col-sm-7">
+                                <input type="email" class="form-control text-center" name="cardholderEmail" id="cardholderEmail" placeholder="Correo MercadoPago" required/>
+                            </div>                                    
+                            <div class="form-group col-12">
+                                <button type="submit" class="btn btn-warning col-12 col-sm-3 mt-2">Continuar</button>
+                                <a href="/plataforma" class="btn btn-danger col-12 col-sm-3 mt-2">Cancelar</a>
+                            </div>
+                        </form>
+
+                        <p class="subtitle" style="color:black;">No tengo cuenta de MercadoPago</p>
+                        <a href="https://www.mercadopago.com.ar/hub/registration/landing" target="_blank" class="btn btn-primary">
+                            Click para crear nueva cuenta
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+    <?php else : ?>
+
+        <div class="py-3 container text-center">
+            <h4 class="title">Confirmación de Pago</h4>
+            <hr class="my-4">
+            <h4><?php echo $_SESSION['auth_user']['nombre'] ?>, va a realizar un pago por un monto de:
+                <h2 class="title">
+                    <?php
+                        echo(number_format($data_payment['total'],2) . ' ' . $money);
+                    ?>
+                </h2>
+            </h4>
+            
+            <h6>Por concepto de la siguiente suscripcion: </h6>
+                <p class="title"><?php echo $data_payment['course_name'] . ' en modalidad ' . $data_payment['modality'] ?></p>
+                <hr>
+                <p>Luego de procesar el pago será direccionado a la plataforma donde podrá ver el contenido adquirido.
+                    <br/><strong>Para más información puede escribirnos a: info@ayudaenlasemociones.com</strong>
+                </p>
+            
+            <?php if($money == 'USD') : 
+                // <!-- --------------------------------------------------------------->
+                // <!--------------------------- IF MONEY IS USD ---------------------->    
+                // <!------------------------------ PAYPAL ---------------------------->
+                ?>                
+
+                <!-- WHEN IS A PREMIUM SUBSCRIPTION -->
+                <?php if($data_payment['course_code'] === '1') : ?>
+
+                    <script src="https://www.paypal.com/sdk/js?client-id=<?php echo PP_CLIENT_ID ?>&vault=true&intent=subscription&disable-funding=credit,card"></script>
+
+                    <div id="paypal-button-container"></div>
+
+                        <?php if($_POST['activateSub']) : ?>
+                            
+                        <?php else : ?>
+                            <script>
+                                paypal.Buttons({
+
+                                    createSubscription: function(data, actions) {
+                                        return actions.subscription.create({
+                                            // 'plan_id' : 'P-9NR49994D4983841EMDOMYEY'
+                                            'plan_id' : 'P-1AL756552X485215XMEX23EI'
+                                        });
+                                    },
+                                    onApprove: function(data, actions) {
+
+                                        window.location.href=`/verify_payment.php?status=approved&ent=pp&orderId=${data.orderId}&subscriptionID=${data.subscriptionID}`;
+
+                                    }
+
+                                }).render('#paypal-button-container');
+
+                            </script>
+                        <?php endif; ?>
+                    
+                <?php else : ?>
+                <!-- WHEN IS NOT A PREMIUM SUB -->
+                    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+                
+                    <div id="paypal-button"></div>
+
+                    <script>
+                        paypal.Button.render({
+                        // Configure environment
+                            env: 'production',
+                            client: {
+                                // sandbox: 'AZQ_GUoxi8jz-s2YRkKvTl5Lmsa7zCCTHNh8sc3KhTY3CEKFu-yh6EDQBIfFwJgEeiQA0K2sJp4ETvtU'
+                                production: '<?php echo PP_CLIENT_ID ?>'
+                            },
+                            
+                        // Customize button (optional)
+                            locale: 'es_ES',
+                            style: {
+                                color:  'blue',
+                                shape:  'pill',
+                                label:  'pay',
+                                height: 40
+                            },
+                        // Enable Pay Now checkout Flow (optional)
+                            commit: true,
+
+                        // Set up a payment
+                            payment: function(data, actions) {
+                            return actions.payment.create({
+                                transactions: [{
+                                amount: {
+                                    total: '<?php echo($data_payment['total']); ?>',
+                                    currency: 'USD'
+                                },
+                                description: 'Suscripción <?php echo(" ".$data_payment['course_name']);?>',
+                                custom: '<?php echo $SID;?>#<?php echo openssl_encrypt($pay->idPayment,COD,KEY)?>'
+                                }]
+                            });
+                            },
+                        // Execute the payment
+                            onAuthorize: function(data, actions) {
+                            return actions.payment.execute().then(function() {
+                            // Show a confirmation message to the buyer
+                                window.location = "verify_payment.php?ent=pp&paymentToken="+data.paymentToken+"&paymentID="+data.paymentID+"&type=paypal";
+                            });
+                            }
+
+                        }, '#paypal-button');
+                    </script>
+                <?php endif; ?>
+
+
+        
+            <?php else : 
+            // <!-- ------------------------------------------------------------ -->
+            // <!----------------- IF MONEY IS DIFFERENT TO USD ------------------->    
+            // <!------------------------- MERCADOPAGO ---------------------------->
+
+                if($data_payment['course_code'] === '1') :
+                    
+                    /* WHEN IS A PREMIUM SUBSCRIPTION */
+
+                        $encSession = json_encode($_SESSION);
+                        $transaction_key = $_SESSION['cart']['v_payment']['transaction_key'];
+
+                        $pay = new Payment;
+                        $pay->token = openssl_encrypt($encSession,COD,KEY);
+                        $pay->transaction_key = $transaction_key;
+
+                        $pay->setSessionToken();
+
+                        $alert = '
+                            <div class="mx-auto w-50 alert alert-success" role="alert">
+                                <p>Correo validado correctamente</p>
+                            </div>
+                        ';
+
+                        $subscription_data = json_encode([
+                            'auto_recurring' => [
+                                'currency_id' => 'ARS',
+                                'transaction_amount' => $data_payment['total'],
+                                'frequency' => 1,
+                                'frequency_type' => 'months'
+                            ],
+                            'back_url' => 'https://www.ayudaenlasemociones.com/verify_payment.php?status=approved&tk='.$transaction_key.'&ent=mp',
+                            'collector_id' => MP_COLLECTOR_ID,
+                            'external_reference' => $transaction_key,
+                            'payer_email' => $_POST['cardholderEmail'],
+                            'reason' => 'Suscripción Premium MENSUAL Ayuda en las Emociones',
+                            'status' => 'pending'
+                        ]);
+
+                    /*  CREAR SUSCRIPCION */
+                        $ch = curl_init();
+
+                        curl_setopt_array($ch, array(
+                            CURLOPT_URL => 'https://api.mercadopago.com/preapproval',
+                            CURLOPT_POST => 1,
+                            CURLOPT_HEADER => 0,
+                            CURLOPT_HTTPHEADER => array('Content-Type: application/json', 'Authorization: Bearer ' . MP_ACCESS_TOKEN),
+                            CURLOPT_POSTFIELDS => $subscription_data,
+                            CURLOPT_RETURNTRANSFER => true
+                        ));
+
+                        $res = curl_exec($ch);
+                        $res = json_decode($res, true);
+
+                        curl_close($ch);
+                        
+                            if(isset($res['message'])) {
+                                switch($res['message']) {
+                                    case 'Both payer and collector must be real or test users':
+                                        $alert = '
+                                            <div class="mx-auto w-50 alert alert-danger" role="alert">
+                                                <p>El correo ingresado no pertenece a MercadoPago</p>
+                                            </div>
+                                        ';
+                                        $btn = '<a href="/my_cart.php" class="btn btn-warning">Verificar Correo</a>';
+                                    break;
+                                    case 'Cannot operate between different countries':
+                                        $alert = '
+                                            <div class="mx-auto w-50 alert alert-danger" role="alert">
+                                                <p>La cuenta de correo debe pertenecer a MercadoPago Argentina</p>
+                                            </div>
+                                        ';
+                                        $btn = '<a href="/my_cart.php" class="btn btn-warning">Verificar Correo</a>';
+                                    break;
+                                    case 'Payer and collector cannot be the same user':
+                                        $alert = '
+                                            <div class="mx-auto w-50 alert alert-danger" role="alert">
+                                                <p>No puedes pagarte a ti mismo, usa otra cuenta de correo</p>
+                                            </div>
+                                        ';
+                                        $btn = '<a href="/my_cart.php" class="btn btn-warning">Verificar Correo</a>';
+                                    break;
+                                }
+                            }else {
+
+                                $btn = '<a href="'.$res['init_point'].'" class="btn btn-warning">Finalizar Pago</a>';
+                            }
+
+                            echo $alert;
+                            echo $btn;
+                        ?>
+
+                <?php else :
+                    /* WHEN IT IS NOT A PREMIUM SUB */
+                    MercadoPago\SDK::setAccessToken(MP_ACCESS_TOKEN);
+                
+                    $preference = new MercadoPago\Preference();
+
+                    $encSession = json_encode($_SESSION);
+                    $transaction_key = $_SESSION['cart']['v_payment']['transaction_key'];
+
+                    $pay = new Payment;
+                    $pay->token = openssl_encrypt($encSession,COD,KEY);
+                    $pay->transaction_key = $transaction_key;
+
+                    $pay->setSessionToken();
+                
+                    /* New Payer */
+                        $payer = new MercadoPago\Payer();
+                        $payer->name = $_SESSION['auth_user']['nombre'] . " " . $_SESSION['auth_user']['apellido'];
+                        $payer->email = $email;
+                        $payer->date_created = date('Y-m-d H:i:s');
+
+                    /* New Item */
+                        $item = new MercadoPago\Item();
+                        $item->title = $data_payment['course_name'];
+                        $item->quantity = $data_payment['quantity'];
+                        $item->unit_price = $data_payment['price'];
+
+                    /* Return URLs */
+                        $preference->back_urls = array(
+                            "success" => "https://ayudaenlasemociones.com/verify_payment.php?ent=mp&tk=$transaction_key",
+                            "pending" => "https://ayudaenlasemociones.com/verify_payment.php?error=pending/",
+                            "failure" => "https://ayudaenlasemociones.com/verify_payment.php?error=failure/"
+                        );
+                        $preference->auto_return = "approved";
+                        
+                        $preference->items = array($item);
+                        $preference->payer = $payer;
+
+                        $preference->save();
+
+                        $currency = $preference->items[0]->currency_id; ?>
+
+                            <style>
+                                .mercadopago-button {
+                                    background-color: orange;
+                                    font-size: 1rem;
+                                    font-weight: bold;
+                                }
+                            </style>
+
+                            <form action="verify_payment.php" method="POST">            
+                                <script src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
+                                    data-preference-id="<?php echo $preference->id; ?>"
+                                    data-elements-color="#76061e"
+                                    data-button-label="Realizar Compra">
+                                </script>
+                            </form> 
+                <?php endif; ?>
+
+            <?php endif; ?>
+
+        </div>
+    <?php endif; ?>
+
+</body>
+
+
+<?php include_once('includes/footer_3.php'); ?>
