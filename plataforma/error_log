@@ -1,0 +1,322 @@
+[25-Sep-2020 19:24:05 UTC] PHP Warning:  require_once(models/dbconnect.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/controllers/verify_url.php on line 8
+[25-Sep-2020 19:24:05 UTC] PHP Fatal error:  require_once(): Failed opening required 'models/dbconnect.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/controllers/verify_url.php on line 8
+[25-Sep-2020 19:25:43 UTC] PHP Warning:  require_once(models/dbconnect.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/controllers/verify_url.php on line 8
+[25-Sep-2020 19:25:43 UTC] PHP Fatal error:  require_once(): Failed opening required 'models/dbconnect.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/controllers/verify_url.php on line 8
+[25-Sep-2020 19:27:43 UTC] PHP Warning:  require_once(models/dbconnect.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/controllers/verify_url.php on line 9
+[25-Sep-2020 19:27:43 UTC] PHP Fatal error:  require_once(): Failed opening required 'models/dbconnect.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/controllers/verify_url.php on line 9
+[25-Sep-2020 19:29:29 UTC] PHP Fatal error:  Class 'Connect' not found in /home/hdztgtbrhzhk/public_html/controllers/Campaigns.php on line 5
+[25-Sep-2020 19:29:31 UTC] PHP Fatal error:  Uncaught Error: Function name must be a string in /home/hdztgtbrhzhk/public_html/controllers/verify_url.php:6
+Stack trace:
+#0 /home/hdztgtbrhzhk/public_html/controllers/Campaigns.php(3): include_once()
+#1 /home/hdztgtbrhzhk/public_html/plataforma/admin/campaigns.php(3): include_once('/home/hdztgtbrh...')
+#2 /home/hdztgtbrhzhk/public_html/plataforma/index.php(21): include_once('/home/hdztgtbrh...')
+#3 {main}
+  thrown in /home/hdztgtbrhzhk/public_html/controllers/verify_url.php on line 6
+[25-Sep-2020 19:30:42 UTC] PHP Fatal error:  Uncaught Error: Function name must be a string in /home/hdztgtbrhzhk/public_html/controllers/verify_url.php:6
+Stack trace:
+#0 /home/hdztgtbrhzhk/public_html/controllers/Campaigns.php(3): include_once()
+#1 /home/hdztgtbrhzhk/public_html/plataforma/admin/campaigns.php(3): include_once('/home/hdztgtbrh...')
+#2 /home/hdztgtbrhzhk/public_html/plataforma/index.php(21): include_once('/home/hdztgtbrh...')
+#3 {main}
+  thrown in /home/hdztgtbrhzhk/public_html/controllers/verify_url.php on line 6
+[25-Sep-2020 19:30:45 UTC] PHP Fatal error:  Uncaught Error: Function name must be a string in /home/hdztgtbrhzhk/public_html/controllers/verify_url.php:6
+Stack trace:
+#0 /home/hdztgtbrhzhk/public_html/controllers/Campaigns.php(3): include_once()
+#1 /home/hdztgtbrhzhk/public_html/plataforma/admin/campaigns.php(3): include_once('/home/hdztgtbrh...')
+#2 /home/hdztgtbrhzhk/public_html/plataforma/index.php(21): include_once('/home/hdztgtbrh...')
+#3 {main}
+  thrown in /home/hdztgtbrhzhk/public_html/controllers/verify_url.php on line 6
+[25-Sep-2020 19:30:51 UTC] PHP Fatal error:  Uncaught Error: Function name must be a string in /home/hdztgtbrhzhk/public_html/controllers/verify_url.php:6
+Stack trace:
+#0 /home/hdztgtbrhzhk/public_html/controllers/Campaigns.php(3): include_once()
+#1 /home/hdztgtbrhzhk/public_html/plataforma/admin/campaigns.php(3): include_once('/home/hdztgtbrh...')
+#2 /home/hdztgtbrhzhk/public_html/plataforma/index.php(21): include_once('/home/hdztgtbrh...')
+#3 {main}
+  thrown in /home/hdztgtbrhzhk/public_html/controllers/verify_url.php on line 6
+[25-Sep-2020 19:30:55 UTC] PHP Fatal error:  Uncaught Error: Function name must be a string in /home/hdztgtbrhzhk/public_html/controllers/verify_url.php:6
+Stack trace:
+#0 /home/hdztgtbrhzhk/public_html/controllers/Campaigns.php(3): include_once()
+#1 /home/hdztgtbrhzhk/public_html/plataforma/admin/campaigns.php(3): include_once('/home/hdztgtbrh...')
+#2 /home/hdztgtbrhzhk/public_html/plataforma/index.php(21): include_once('/home/hdztgtbrh...')
+#3 {main}
+  thrown in /home/hdztgtbrhzhk/public_html/controllers/verify_url.php on line 6
+[25-Sep-2020 19:31:27 UTC] PHP Fatal error:  Uncaught Error: Function name must be a string in /home/hdztgtbrhzhk/public_html/controllers/verify_url.php:7
+Stack trace:
+#0 /home/hdztgtbrhzhk/public_html/controllers/Campaigns.php(3): include_once()
+#1 /home/hdztgtbrhzhk/public_html/plataforma/admin/campaigns.php(3): include_once('/home/hdztgtbrh...')
+#2 /home/hdztgtbrhzhk/public_html/plataforma/index.php(21): include_once('/home/hdztgtbrh...')
+#3 {main}
+  thrown in /home/hdztgtbrhzhk/public_html/controllers/verify_url.php on line 7
+[25-Sep-2020 19:56:44 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[25-Sep-2020 19:56:44 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[25-Sep-2020 19:57:50 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[25-Sep-2020 19:57:50 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[25-Sep-2020 20:01:50 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[25-Sep-2020 20:01:50 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[25-Sep-2020 20:02:16 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[25-Sep-2020 20:02:16 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[25-Sep-2020 20:03:54 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[25-Sep-2020 20:03:54 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[25-Sep-2020 20:30:22 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[25-Sep-2020 20:30:22 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[25-Sep-2020 20:34:56 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[25-Sep-2020 20:34:56 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[25-Sep-2020 20:51:12 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[25-Sep-2020 20:51:12 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[26-Sep-2020 02:03:28 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[26-Sep-2020 02:03:28 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[28-Sep-2020 11:45:16 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[28-Sep-2020 11:45:16 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[29-Sep-2020 16:01:38 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[29-Sep-2020 16:01:38 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[29-Sep-2020 16:02:27 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[29-Sep-2020 16:02:27 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[02-Oct-2020 14:21:33 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[02-Oct-2020 14:21:33 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[05-Oct-2020 22:04:18 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[05-Oct-2020 22:04:18 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[07-Oct-2020 12:53:56 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[07-Oct-2020 12:53:56 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[01-Nov-2020 13:43:05 UTC] PHP Warning:  fopen(): Filename cannot be empty in /home/hdztgtbrhzhk/public_html/includes/footer_3.php on line 22
+[01-Nov-2020 13:43:05 UTC] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/hdztgtbrhzhk/public_html/includes/footer_3.php on line 23
+[01-Nov-2020 13:43:05 UTC] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /home/hdztgtbrhzhk/public_html/includes/footer_3.php on line 24
+[01-Nov-2020 13:43:05 UTC] PHP Warning:  fopen(): Filename cannot be empty in /home/hdztgtbrhzhk/public_html/includes/footer_3.php on line 22
+[01-Nov-2020 13:43:05 UTC] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/hdztgtbrhzhk/public_html/includes/footer_3.php on line 23
+[01-Nov-2020 13:43:05 UTC] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /home/hdztgtbrhzhk/public_html/includes/footer_3.php on line 24
+[01-Nov-2020 13:43:12 UTC] PHP Warning:  fopen(): Filename cannot be empty in /home/hdztgtbrhzhk/public_html/includes/footer_3.php on line 22
+[01-Nov-2020 13:43:12 UTC] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/hdztgtbrhzhk/public_html/includes/footer_3.php on line 23
+[01-Nov-2020 13:43:12 UTC] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /home/hdztgtbrhzhk/public_html/includes/footer_3.php on line 24
+[01-Nov-2020 13:43:15 UTC] PHP Warning:  fopen(): Filename cannot be empty in /home/hdztgtbrhzhk/public_html/includes/footer_3.php on line 22
+[01-Nov-2020 13:43:15 UTC] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/hdztgtbrhzhk/public_html/includes/footer_3.php on line 23
+[01-Nov-2020 13:43:15 UTC] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /home/hdztgtbrhzhk/public_html/includes/footer_3.php on line 24
+[01-Nov-2020 13:43:19 UTC] PHP Warning:  fopen(): Filename cannot be empty in /home/hdztgtbrhzhk/public_html/includes/footer_3.php on line 22
+[01-Nov-2020 13:43:19 UTC] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/hdztgtbrhzhk/public_html/includes/footer_3.php on line 23
+[01-Nov-2020 13:43:19 UTC] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /home/hdztgtbrhzhk/public_html/includes/footer_3.php on line 24
+[01-Nov-2020 13:43:27 UTC] PHP Warning:  fopen(): Filename cannot be empty in /home/hdztgtbrhzhk/public_html/includes/footer_3.php on line 22
+[01-Nov-2020 13:43:27 UTC] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/hdztgtbrhzhk/public_html/includes/footer_3.php on line 23
+[01-Nov-2020 13:43:27 UTC] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /home/hdztgtbrhzhk/public_html/includes/footer_3.php on line 24
+[02-Nov-2020 00:27:20 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[02-Nov-2020 00:27:20 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[05-Nov-2020 02:49:24 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[05-Nov-2020 02:49:24 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[05-Nov-2020 02:52:01 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[05-Nov-2020 02:52:01 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[06-Nov-2020 17:02:02 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[06-Nov-2020 17:02:02 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[06-Nov-2020 23:36:57 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[06-Nov-2020 23:36:57 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[09-Nov-2020 14:10:34 UTC] PHP Warning:  include_once(admin/profesionales/index.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/index.php on line 27
+[09-Nov-2020 14:10:34 UTC] PHP Warning:  include_once(): Failed opening 'admin/profesionales/index.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/index.php on line 27
+[09-Nov-2020 14:13:53 UTC] PHP Warning:  include_once(admin/seminarios/maiaa.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/index.php on line 27
+[09-Nov-2020 14:13:53 UTC] PHP Warning:  include_once(): Failed opening 'admin/seminarios/maiaa.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/index.php on line 27
+[09-Nov-2020 14:14:32 UTC] PHP Warning:  include_once(admin/campaigns/main.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/index.php on line 27
+[09-Nov-2020 14:14:32 UTC] PHP Warning:  include_once(): Failed opening 'admin/campaigns/main.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/index.php on line 27
+[09-Nov-2020 14:15:25 UTC] PHP Warning:  include_once(admin/profesionales/main.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/index.php on line 27
+[09-Nov-2020 14:15:25 UTC] PHP Warning:  include_once(): Failed opening 'admin/profesionales/main.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/index.php on line 27
+[09-Nov-2020 14:55:40 UTC] PHP Warning:  include_once(admin/seminario/main.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/index.php on line 27
+[09-Nov-2020 14:55:40 UTC] PHP Warning:  include_once(): Failed opening 'admin/seminario/main.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/index.php on line 27
+[09-Nov-2020 20:22:16 UTC] PHP Warning:  include_once(admin/seminarios/nuevo_material.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/index.php on line 27
+[09-Nov-2020 20:22:16 UTC] PHP Warning:  include_once(): Failed opening 'admin/seminarios/nuevo_material.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/index.php on line 27
+[09-Nov-2020 20:22:21 UTC] PHP Warning:  include_once(admin/seminarios/nuevo_material.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/index.php on line 27
+[09-Nov-2020 20:22:21 UTC] PHP Warning:  include_once(): Failed opening 'admin/seminarios/nuevo_material.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/index.php on line 27
+[09-Nov-2020 20:33:11 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[09-Nov-2020 20:33:11 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[09-Nov-2020 20:34:59 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[09-Nov-2020 20:34:59 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[11-Nov-2020 16:14:37 UTC] PHP Warning:  include_once(admin/seminarios$subview=seminario/main.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/index.php on line 27
+[11-Nov-2020 16:14:37 UTC] PHP Warning:  include_once(): Failed opening 'admin/seminarios$subview=seminario/main.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/index.php on line 27
+[11-Nov-2020 16:15:38 UTC] PHP Warning:  include_once(admin/seminarios$subview=seminario/main.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/index.php on line 27
+[11-Nov-2020 16:15:38 UTC] PHP Warning:  include_once(): Failed opening 'admin/seminarios$subview=seminario/main.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/index.php on line 27
+[11-Nov-2020 17:24:33 UTC] PHP Warning:  include_once(../controllers/seminarios.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/main.php on line 2
+[11-Nov-2020 17:24:33 UTC] PHP Warning:  include_once(): Failed opening '../controllers/seminarios.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/main.php on line 2
+[11-Nov-2020 17:24:34 UTC] PHP Fatal error:  Uncaught Error: Class 'Seminario' not found in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/main.php:4
+Stack trace:
+#0 /home/hdztgtbrhzhk/public_html/plataforma/index.php(33): include_once()
+#1 {main}
+  thrown in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/main.php on line 4
+[11-Nov-2020 17:26:22 UTC] PHP Warning:  include_once(../../controllers/seminarios.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/main.php on line 2
+[11-Nov-2020 17:26:22 UTC] PHP Warning:  include_once(): Failed opening '../../controllers/seminarios.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/main.php on line 2
+[11-Nov-2020 17:26:22 UTC] PHP Fatal error:  Uncaught Error: Class 'Seminario' not found in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/main.php:4
+Stack trace:
+#0 /home/hdztgtbrhzhk/public_html/plataforma/index.php(33): include_once()
+#1 {main}
+  thrown in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/main.php on line 4
+[11-Nov-2020 17:27:30 UTC] PHP Warning:  require_once(models/dbconnect.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/controllers/Seminarios.php on line 3
+[11-Nov-2020 17:27:30 UTC] PHP Fatal error:  require_once(): Failed opening required 'models/dbconnect.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/controllers/Seminarios.php on line 3
+[11-Nov-2020 17:34:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function var_drump() in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/main.php:9
+Stack trace:
+#0 /home/hdztgtbrhzhk/public_html/plataforma/index.php(33): include_once()
+#1 {main}
+  thrown in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/main.php on line 9
+[11-Nov-2020 17:34:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function var_drump() in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/main.php:9
+Stack trace:
+#0 /home/hdztgtbrhzhk/public_html/plataforma/index.php(33): include_once()
+#1 {main}
+  thrown in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/main.php on line 9
+[12-Nov-2020 15:41:37 UTC] PHP Warning:  Illegal string offset 'nombre' in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/seminario.php on line 53
+[12-Nov-2020 15:41:37 UTC] PHP Warning:  Illegal string offset 'nombre' in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/seminario.php on line 53
+[12-Nov-2020 20:05:04 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[12-Nov-2020 20:05:04 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[12-Nov-2020 20:06:26 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[12-Nov-2020 20:06:26 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[12-Nov-2020 20:06:37 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[12-Nov-2020 20:06:37 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[14-Nov-2020 19:07:20 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[14-Nov-2020 19:07:20 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[16-Nov-2020 15:16:51 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getTemasSeminario() on null in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/seminario.php:132
+Stack trace:
+#0 /home/hdztgtbrhzhk/public_html/plataforma/index.php(29): include_once()
+#1 {main}
+  thrown in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/seminario.php on line 132
+[16-Nov-2020 16:38:19 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/seminario.php on line 133
+[16-Nov-2020 16:39:56 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/seminario.php on line 134
+[16-Nov-2020 17:06:06 UTC] PHP Warning:  Use of undefined constant this - assumed 'this' (this will throw an Error in a future version of PHP) in /home/hdztgtbrhzhk/public_html/controllers/Seminarios.php on line 185
+[16-Nov-2020 17:06:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getLastIdSeminarioLive() in /home/hdztgtbrhzhk/public_html/controllers/Seminarios.php:185
+Stack trace:
+#0 /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/seminario.php(57): Seminario->getCodeLastSeminarioLive()
+#1 /home/hdztgtbrhzhk/public_html/plataforma/index.php(29): include_once('/home/hdztgtbrh...')
+#2 {main}
+  thrown in /home/hdztgtbrhzhk/public_html/controllers/Seminarios.php on line 185
+[16-Nov-2020 17:06:11 UTC] PHP Warning:  Use of undefined constant this - assumed 'this' (this will throw an Error in a future version of PHP) in /home/hdztgtbrhzhk/public_html/controllers/Seminarios.php on line 185
+[16-Nov-2020 17:06:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getLastIdSeminarioLive() in /home/hdztgtbrhzhk/public_html/controllers/Seminarios.php:185
+Stack trace:
+#0 /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/seminario.php(57): Seminario->getCodeLastSeminarioLive()
+#1 /home/hdztgtbrhzhk/public_html/plataforma/index.php(29): include_once('/home/hdztgtbrh...')
+#2 {main}
+  thrown in /home/hdztgtbrhzhk/public_html/controllers/Seminarios.php on line 185
+[16-Nov-2020 17:06:46 UTC] PHP Warning:  Use of undefined constant this - assumed 'this' (this will throw an Error in a future version of PHP) in /home/hdztgtbrhzhk/public_html/controllers/Seminarios.php on line 185
+[16-Nov-2020 17:06:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getLastIdSeminarioLive() in /home/hdztgtbrhzhk/public_html/controllers/Seminarios.php:185
+Stack trace:
+#0 /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/seminario.php(57): Seminario->getCodeLastSeminarioLive()
+#1 /home/hdztgtbrhzhk/public_html/plataforma/index.php(29): include_once('/home/hdztgtbrh...')
+#2 {main}
+  thrown in /home/hdztgtbrhzhk/public_html/controllers/Seminarios.php on line 185
+[16-Nov-2020 17:06:50 UTC] PHP Warning:  Use of undefined constant this - assumed 'this' (this will throw an Error in a future version of PHP) in /home/hdztgtbrhzhk/public_html/controllers/Seminarios.php on line 185
+[16-Nov-2020 17:06:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getLastIdSeminarioLive() in /home/hdztgtbrhzhk/public_html/controllers/Seminarios.php:185
+Stack trace:
+#0 /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/seminario.php(57): Seminario->getCodeLastSeminarioLive()
+#1 /home/hdztgtbrhzhk/public_html/plataforma/index.php(29): include_once('/home/hdztgtbrh...')
+#2 {main}
+  thrown in /home/hdztgtbrhzhk/public_html/controllers/Seminarios.php on line 185
+[16-Nov-2020 17:16:30 UTC] PHP Warning:  Use of undefined constant this - assumed 'this' (this will throw an Error in a future version of PHP) in /home/hdztgtbrhzhk/public_html/controllers/Seminarios.php on line 185
+[16-Nov-2020 17:16:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getLastIdSeminarioLive() in /home/hdztgtbrhzhk/public_html/controllers/Seminarios.php:185
+Stack trace:
+#0 /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/seminario.php(27): Seminario->getCodeLastSeminarioLive()
+#1 /home/hdztgtbrhzhk/public_html/plataforma/index.php(29): include_once('/home/hdztgtbrh...')
+#2 {main}
+  thrown in /home/hdztgtbrhzhk/public_html/controllers/Seminarios.php on line 185
+[16-Nov-2020 17:18:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getLastIdSeminarioLive() in /home/hdztgtbrhzhk/public_html/controllers/Seminarios.php:185
+Stack trace:
+#0 /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/seminario.php(27): Seminario->getCodeLastSeminarioLive()
+#1 /home/hdztgtbrhzhk/public_html/plataforma/index.php(29): include_once('/home/hdztgtbrh...')
+#2 {main}
+  thrown in /home/hdztgtbrhzhk/public_html/controllers/Seminarios.php on line 185
+[16-Nov-2020 17:20:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getLastIdSeminarioLive() in /home/hdztgtbrhzhk/public_html/controllers/Seminarios.php:185
+Stack trace:
+#0 /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/seminario.php(27): Seminario->getCodeLastSeminarioLive()
+#1 /home/hdztgtbrhzhk/public_html/plataforma/index.php(29): include_once('/home/hdztgtbrh...')
+#2 {main}
+  thrown in /home/hdztgtbrhzhk/public_html/controllers/Seminarios.php on line 185
+[16-Nov-2020 17:32:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getLastIdSeminarioLive() in /home/hdztgtbrhzhk/public_html/controllers/Seminarios.php:164
+Stack trace:
+#0 /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/seminario.php(27): Seminario->getCodeLastSeminarioLive()
+#1 /home/hdztgtbrhzhk/public_html/plataforma/index.php(29): include_once('/home/hdztgtbrh...')
+#2 {main}
+  thrown in /home/hdztgtbrhzhk/public_html/controllers/Seminarios.php on line 164
+[16-Nov-2020 17:35:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::close() in /home/hdztgtbrhzhk/public_html/controllers/Seminarios.php:180
+Stack trace:
+#0 /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/seminario.php(27): Seminario->getCodeLastSeminarioLive()
+#1 /home/hdztgtbrhzhk/public_html/plataforma/index.php(29): include_once('/home/hdztgtbrh...')
+#2 {main}
+  thrown in /home/hdztgtbrhzhk/public_html/controllers/Seminarios.php on line 180
+[16-Nov-2020 19:33:14 UTC] PHP Warning:  require_once(/controllers/models/dbconnect.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/controllers/verify_url.php on line 16
+[16-Nov-2020 19:33:14 UTC] PHP Fatal error:  require_once(): Failed opening required '/controllers/models/dbconnect.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/controllers/verify_url.php on line 16
+[16-Nov-2020 19:36:10 UTC] PHP Warning:  require_once(/models/dbconnect.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/controllers/verify_url.php on line 16
+[16-Nov-2020 19:36:10 UTC] PHP Fatal error:  require_once(): Failed opening required '/models/dbconnect.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/controllers/verify_url.php on line 16
+[16-Nov-2020 19:36:36 UTC] PHP Warning:  require_once(/models/dbconnect.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/controllers/verify_url.php on line 16
+[16-Nov-2020 19:36:36 UTC] PHP Fatal error:  require_once(): Failed opening required '/models/dbconnect.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/controllers/verify_url.php on line 16
+[16-Nov-2020 22:40:14 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/seminario.php on line 78
+[16-Nov-2020 22:40:34 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/seminario.php on line 78
+[16-Nov-2020 22:42:29 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/seminario.php on line 78
+[16-Nov-2020 22:42:44 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/seminario.php on line 78
+[16-Nov-2020 23:47:20 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[16-Nov-2020 23:47:20 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[17-Nov-2020 12:00:19 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[17-Nov-2020 12:00:19 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[01-Dec-2020 15:57:01 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[01-Dec-2020 15:57:01 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[02-Dec-2020 22:49:03 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[02-Dec-2020 22:49:03 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[04-Dec-2020 15:03:47 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/material.php on line 41
+[04-Dec-2020 15:10:27 UTC] PHP Warning:  include_once(../controllers/Material.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/material.php on line 4
+[04-Dec-2020 15:10:27 UTC] PHP Warning:  include_once(): Failed opening '../controllers/Material.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/material.php on line 4
+[04-Dec-2020 15:10:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Seminario::getOrderLastMaterialLive() in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/material.php:8
+Stack trace:
+#0 /home/hdztgtbrhzhk/public_html/plataforma/index.php(29): include_once()
+#1 {main}
+  thrown in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/material.php on line 8
+[04-Dec-2020 15:11:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Seminario::getOrderLastMaterialLive() in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/material.php:8
+Stack trace:
+#0 /home/hdztgtbrhzhk/public_html/plataforma/index.php(29): include_once()
+#1 {main}
+  thrown in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/material.php on line 8
+[04-Dec-2020 15:12:02 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/material.php on line 43
+[04-Dec-2020 15:16:37 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/material.php on line 45
+[04-Dec-2020 15:26:06 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/material.php on line 51
+[04-Dec-2020 15:26:14 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/material.php on line 51
+[04-Dec-2020 15:26:45 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/material.php on line 53
+[04-Dec-2020 15:27:37 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/material.php on line 53
+[04-Dec-2020 15:28:05 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/material.php on line 53
+[04-Dec-2020 15:28:10 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/material.php on line 53
+[04-Dec-2020 17:16:48 UTC] PHP Warning:  Illegal string offset 'nombre' in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/material.php on line 23
+[04-Dec-2020 17:16:52 UTC] PHP Warning:  Illegal string offset 'nombre' in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/material.php on line 23
+[04-Dec-2020 18:48:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/material.php on line 115
+[04-Dec-2020 18:50:11 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/material.php on line 115
+[04-Dec-2020 18:51:15 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/material.php on line 115
+[04-Dec-2020 23:08:48 UTC] PHP Warning:  require_once(models/dbconnect.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/controllers/Videos.php on line 3
+[04-Dec-2020 23:08:48 UTC] PHP Fatal error:  require_once(): Failed opening required 'models/dbconnect.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/controllers/Videos.php on line 3
+[04-Dec-2020 23:18:25 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getMaterialSeminario() on null in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/video.php:12
+Stack trace:
+#0 /home/hdztgtbrhzhk/public_html/plataforma/index.php(29): include_once()
+#1 {main}
+  thrown in /home/hdztgtbrhzhk/public_html/plataforma/admin/seminarios/video.php on line 12
+[05-Dec-2020 01:36:18 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[05-Dec-2020 01:36:18 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[05-Dec-2020 03:23:29 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[05-Dec-2020 03:23:29 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[06-Dec-2020 21:15:54 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[06-Dec-2020 21:15:54 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[06-Dec-2020 21:19:01 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[06-Dec-2020 21:19:01 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[07-Dec-2020 14:05:56 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[07-Dec-2020 14:05:56 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[07-Dec-2020 14:37:47 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[07-Dec-2020 14:37:47 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[07-Dec-2020 14:38:31 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[07-Dec-2020 14:38:31 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[07-Dec-2020 18:02:41 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[07-Dec-2020 18:02:41 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[07-Dec-2020 18:03:20 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[07-Dec-2020 18:03:20 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[07-Dec-2020 19:44:20 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[07-Dec-2020 19:44:20 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[07-Dec-2020 23:39:23 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[07-Dec-2020 23:39:23 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[08-Dec-2020 23:18:17 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[08-Dec-2020 23:18:18 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[08-Dec-2020 23:53:28 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[08-Dec-2020 23:53:29 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[10-Dec-2020 22:31:00 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[10-Dec-2020 22:31:00 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[10-Dec-2020 22:31:17 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[10-Dec-2020 22:31:17 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[28-Dec-2020 14:26:25 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[28-Dec-2020 14:26:25 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[30-Dec-2020 14:54:14 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[30-Dec-2020 14:54:14 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[04-Jan-2021 13:43:52 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[04-Jan-2021 13:43:52 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[04-Jan-2021 16:32:06 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[04-Jan-2021 16:32:06 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[11-Jan-2021 13:37:40 UTC] PHP Warning:  include_once(../models/_config.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4
+[11-Jan-2021 13:37:40 UTC] PHP Warning:  include_once(): Failed opening '../models/_config.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/logout.php on line 4

@@ -6,8 +6,8 @@
 
 
 	define('DB_HOST','localhost');
-	define('DB_USERNAME','aelemadmindb');
-	define('DB_PASSWORD','Xo!QJ0yzc6jt3&f');
+	define('DB_USERNAME','root');
+	define('DB_PASSWORD','');
 	define('DB_NAME','aelem');
 	define('DB_CHARSET','utf8');
 

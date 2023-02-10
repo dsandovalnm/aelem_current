@@ -1,0 +1,42 @@
+[16-Nov-2020 17:53:35 UTC] PHP Warning:  include_once(../controllers/Seminarios.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/models/Seminarios.php on line 3
+[16-Nov-2020 17:53:35 UTC] PHP Warning:  include_once(): Failed opening '../controllers/Seminarios.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/models/Seminarios.php on line 3
+[16-Nov-2020 17:55:43 UTC] PHP Warning:  require_once(../models/dbconnect.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/controllers/verify_url.php on line 13
+[16-Nov-2020 17:55:43 UTC] PHP Fatal error:  require_once(): Failed opening required '../models/dbconnect.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/controllers/verify_url.php on line 13
+[16-Nov-2020 17:56:39 UTC] PHP Warning:  require_once(../models/dbconnect.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/controllers/verify_url.php on line 13
+[16-Nov-2020 17:56:39 UTC] PHP Fatal error:  require_once(): Failed opening required '../models/dbconnect.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/controllers/verify_url.php on line 13
+[16-Nov-2020 18:38:28 UTC] PHP Warning:  require_once(../models/dbconnect.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/controllers/verify_url.php on line 13
+[16-Nov-2020 18:38:28 UTC] PHP Fatal error:  require_once(): Failed opening required '../models/dbconnect.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/controllers/verify_url.php on line 13
+[02-Dec-2020 22:11:39 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type PDOException as array in /home/hdztgtbrhzhk/public_html/controllers/Seminarios.php:291
+Stack trace:
+#0 /home/hdztgtbrhzhk/public_html/plataforma/models/_Seminarios.php(41): Seminario->addSeminarioLive()
+#1 {main}
+  thrown in /home/hdztgtbrhzhk/public_html/controllers/Seminarios.php on line 291
+[03-Dec-2020 15:51:17 UTC] PHP Warning:  move_uploaded_file(/img/seminarios-img/me.jpg): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/models/_Seminarios.php on line 44
+[03-Dec-2020 15:51:17 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpKbC4AB' to '/img/seminarios-img/me.jpg' in /home/hdztgtbrhzhk/public_html/plataforma/models/_Seminarios.php on line 44
+[03-Dec-2020 17:40:03 UTC] PHP Warning:  explode() expects at least 2 parameters, 1 given in /home/hdztgtbrhzhk/public_html/plataforma/models/_Seminarios.php on line 43
+[03-Dec-2020 17:41:50 UTC] PHP Warning:  explode(): Empty delimiter in /home/hdztgtbrhzhk/public_html/plataforma/models/_Seminarios.php on line 43
+[04-Dec-2020 00:10:06 UTC] PHP Warning:  require_once(models/dbconnect.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/controllers/Material.php on line 3
+[04-Dec-2020 00:10:06 UTC] PHP Fatal error:  require_once(): Failed opening required 'models/dbconnect.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/controllers/Material.php on line 3
+[04-Dec-2020 02:21:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function int() in /home/hdztgtbrhzhk/public_html/plataforma/models/_Seminarios.php:161
+Stack trace:
+#0 {main}
+  thrown in /home/hdztgtbrhzhk/public_html/plataforma/models/_Seminarios.php on line 161
+[04-Dec-2020 16:55:33 UTC] PHP Warning:  include_once(../../controllers/Material.php): failed to open stream: No such file or directory in /home/hdztgtbrhzhk/public_html/plataforma/models/_Seminarios.php on line 4
+[04-Dec-2020 16:55:33 UTC] PHP Warning:  include_once(): Failed opening '../../controllers/Material.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/hdztgtbrhzhk/public_html/plataforma/models/_Seminarios.php on line 4
+[04-Dec-2020 20:15:46 UTC] PHP Parse error:  syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$' in /home/hdztgtbrhzhk/public_html/plataforma/models/_Seminarios.php on line 185
+[04-Dec-2020 22:37:01 UTC] PHP Fatal error:  Uncaught Error: Call to a member function removeMaterialSeminario() on null in /home/hdztgtbrhzhk/public_html/plataforma/models/_Seminarios.php:258
+Stack trace:
+#0 {main}
+  thrown in /home/hdztgtbrhzhk/public_html/plataforma/models/_Seminarios.php on line 258
+[04-Dec-2020 22:38:31 UTC] PHP Fatal error:  Uncaught Error: Call to a member function removeMaterialSeminario() on null in /home/hdztgtbrhzhk/public_html/plataforma/models/_Seminarios.php:258
+Stack trace:
+#0 {main}
+  thrown in /home/hdztgtbrhzhk/public_html/plataforma/models/_Seminarios.php on line 258
+[04-Dec-2020 22:39:40 UTC] PHP Fatal error:  Uncaught Error: Call to a member function removeMaterialSeminario() on null in /home/hdztgtbrhzhk/public_html/plataforma/models/_Seminarios.php:258
+Stack trace:
+#0 {main}
+  thrown in /home/hdztgtbrhzhk/public_html/plataforma/models/_Seminarios.php on line 258
+[05-Dec-2020 00:31:41 UTC] PHP Fatal error:  Uncaught Error: Class 'VideoSeminarioLive' not found in /home/hdztgtbrhzhk/public_html/plataforma/models/_Seminarios.php:297
+Stack trace:
+#0 {main}
+  thrown in /home/hdztgtbrhzhk/public_html/plataforma/models/_Seminarios.php on line 297
