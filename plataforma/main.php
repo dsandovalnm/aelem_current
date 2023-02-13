@@ -2,11 +2,22 @@
 	<h4 class="title text-center">Bienvenido a la plataforma</h4>
 	<h6 class="text-center">Ayuda en las emociones</h6>
 
-	<div class="home-content">
-		<div class="main-video">
-			<iframe src="https://player.vimeo.com/video/699214564?h=8cca36baa6" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+	<!--<div class="home-content">-->
+		<div class="home-plataforma">
+			<div class="main-video">
+				<iframe class="video-home" src="https://player.vimeo.com/video/699214564?h=8cca36baa6" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<div class="BannerPlataforma">
+				<div class="banner-plataforma1" >
+				</div>
+				<div class="banner-plataforma2">
+				</div>
+			</div>
 		</div>
-	</div>
+		<div class="slider-plataforma">
+
+		</div>
+	<!--</div>-->
 
 	<!-- <div class="modal fade" id="notificationModal" tabindex="-1" role="dialog" aria-labelledby="notificationModalTitle" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">

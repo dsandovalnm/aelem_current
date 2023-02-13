@@ -2906,3 +2906,67 @@ section {
       text-align: center;
     }
 /* FIN ALGO PARA LEER */
+/*Plataforma inicio*/
+    .video-home{
+      border-radius: 5px;
+    }
+    .home-plataforma{
+      height: 360px;
+      display: grid;
+      gap: 1%;
+      grid-template-columns: 70% 29%;
+      grid-template-rows: 1fr;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+    .banner-plataforma1{
+      background-color: red;
+      background-image: url(/plataforma/img/seminarios-live/137.jpg);
+      background-size: cover;
+      background-position: center;
+			height: 48%;
+			margin-bottom: 5%;
+      border-radius: 5px;
+    }
+    .banner-plataforma2{
+      background-image: url(/plataforma/img/cursos/143.jpg);
+      background-size: cover;
+      background-position: center;
+      background-color: red; 
+      height: 48%;
+      border-radius: 5px;
+    }
+    .slider-plataforma{
+      height: 125px;
+      width: 100%;
+      background-image: url(/plataforma/img/TestingNuevoHome/extra-publi2.jpg);
+      background-size: cover;
+      background-position: center;
+      background-color: blue;
+      border-radius: 5px;
+
+    }
+    @media screen and (max-width: 768px) {
+      .home-plataforma{
+        height: 355px;
+        display: block;
+        overflow: hidden;
+        margin-bottom: 10px;
+      }
+      .video-home{
+        height: 230px;
+      }
+      .BannerPlataforma{
+        height: 250px;
+        display: grid;
+        gap: 2%;
+        grid-template-columns: 49% 49%;
+        grid-template-rows: 1fr;
+        overflow: hidden;
+      }
+      .slider-plataforma{
+        background-image: url(/plataforma/img/TestingNuevoHome/extra-publi-min2.jpg);
+      }
+      
+    }
+/*FIN plataforma inicio*/
