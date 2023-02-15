@@ -1,1 +1,0 @@
-<h6 class="title text-center">Adminsitración de Profesionales</h6>

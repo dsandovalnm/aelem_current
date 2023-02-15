@@ -1,1 +1,0 @@
-<?php include_once('helpers/admin_content_cur_sem.php') ?>
