@@ -10,18 +10,76 @@
     $char->cant = 2;
     $ultimas_charlas = $char->getLastCharlas();
     $charlas_abiertas = $char->getCharlasAbiertas();
-
-    $vid = new Video;
+    
+    /*$vid = new Video;
     $vid->tb = 'videos_cuarentena';
-    $vid->limit = 3;
-    $videos_cuarentena = $vid->getLast();
+    $vid->limit = 2;
+    $videos_cuarentena = $vid->getLast();*/
+    $phpOBJ= array(        
+        "items"=> array(array(
+                        "id"=> array(
+                                    "videoId"=>  "ZLTSHaVUr7M"
+                                    ),
+                        "snippet"=> array(
+                                    "title"=> "DEPRESIÓN CLÍNICA - SEBASTIÁN PALERMO",
+                                    "thumbnails"=>array(
+                                                    "default"=>array (
+                                                                "url"=> "https=>//i.ytimg.com/vi/gaV-sVAA2Ac/default.jpg",
+                                                                "width"=> 120,
+                                                                "height"=> 90
+                                                                     ),
+                                                     "medium"=> array(
+                                                                "url"=> "https=>//i.ytimg.com/vi/gaV-sVAA2Ac/mqdefault.jpg",
+                                                                "width"=> 320,
+                                                                "height"=> 180
+                                                                    ),
+                                                    "high"=> array(
+                                                                "url"=> "https=>//i.ytimg.com/vi/gaV-sVAA2Ac/hqdefault.jpg",
+                                                                "height"=> 360,
+                                                                "width"=> 480
+                                                                    )
+                                                        ),
+                                        "channelTitle"=> "Ayuda en las Emociones - Dr Sebastián Palermo")),
+                        array(
+                        
+                        "id"=> array(
+                                    "kind"=> "youtube#video",
+                                    "videoId"=> "Rthi5VSgkXI"
+                                    ),
+                        "snippet"=> array(
+                                    "title"=> "CUANDO NO TENGO GANAS DE CONTINUAR (ABURRIMIENTO) - SEBASTIÁN PALERMO",
+                                    "thumbnails"=>array(
+                                                        "default"=>array (
+                                                                "url"=> "https=>//i.ytimg.com/vi/gaV-sVAA2Ac/default.jpg",
+                                                                "width"=> 120,
+                                                                "height"=> 90
+                                                                         ),
+                                                        "medium"=> array(
+                                                                "url"=> "https=>//i.ytimg.com/vi/gaV-sVAA2Ac/mqdefault.jpg",
+                                                                "width"=> 320,
+                                                                "height"=> 180
+                                                                        ),
+                                                        "high"=> array(
+                                                                "url"=> "https=>//i.ytimg.com/vi/gaV-sVAA2Ac/hqdefault.jpg",
+                                                                "height"=> 360,
+                                                                "width"=> 480
+                                                                       )
+                                                        )                                    
+                                             )
+                             )                    
+                        )
+                  
+                );
+  
+ 
 
+
+                
     $msj = new Mensaje_Muro;
     $last_msj = $msj->getLastMensaje();
 
     $pa = new Pais;
     $paises = $pa->getPaises();
-
 ?>
 <body>
 
@@ -36,7 +94,7 @@
 
     <section class="publi-section">
         <div class="banners">
-            <div id="banner-publicitario-slider" class="banner-publicitario-slider owl-carousel">
+        <div id="banner-publicitario-slider" class="banner-publicitario-slider owl-carousel">
                 <div class="banner-img">
                     <a href="/cursos">
                         <img class="no-mobile" src="/img/index-img/banner_1.jpg" alt="Banner Aelem">
@@ -53,6 +111,12 @@
                     <a href="/cursos">
                         <img class="no-mobile" src="/img/index-img/banner_3.jpg" alt="Banner Aelem">
                         <img class="mobile" src="/img/index-img/banner_3_mb.jpg" alt="Banner Aelem">
+                    </a>
+                </div>
+                <div class="banner-img">
+                    <a href="/cursos">
+                        <img class="no-mobile" src="/img/index-img/banner_4.jpg" alt="Banner Aelem">
+                        <img class="mobile" src="/img/index-img/banner_4_mb.jpg" alt="Banner Aelem">
                     </a>
                 </div>
             </div>
@@ -98,7 +162,7 @@
         <!-- ARTICULO -->
             <div class="article fourth">
                 <a href="/articulos/<?php echo $mostrarArticulos[2]['codigo'] ?>">
-                    <img src="/img/art-img/<?php echo $mostrarArticulos[2]['imagen'] ?>" alt="<?php echo $mostrarArticulos[2]['titulo'] ?> Imagen">
+                    <img  src="/img/art-img/<?php echo $mostrarArticulos[2]['imagen'] ?>" alt="<?php echo $mostrarArticulos[2]['titulo'] ?> Imagen">
                 </a>
                 <div class="articulo-text">
                     <a href="/articulos/<?php echo $mostrarArticulos[2]['codigo'] ?>">
@@ -110,48 +174,57 @@
             <!--  -->
             <div class="article fifth">
                 <div class="info-text">
-                    <img src="/img/index-img/cognocer.png" alt="Instagram Dr. Palermo">
+                    <img src="/img/index-img/cognocer.png" alt="Instagram Dr. Palermo" loading="lazy">
                     <h6 class="texto-imagen px-3">Conocer nuestra libería Online</h6>
                     <a href="https://cognocer.com" class="btn btn-primary p-1 my-2" target="_blank">Click Aquí</a>
                 </div>
                 <a href="https://cognocer.com" target="_blank">
-                    <img src="/img/index-img/publi_box_2.jpg" alt="Cognocer Imagen">
+                    <img src="/img/index-img/publi_box_2.jpg" alt="Cognocer Imagen" loading="lazy">
                 </a>
             </div>
         </div>
     </section>
     <!--  -->
-    <section class="section-extra-publi">
-        <div class="publi text-center">
-            <a href="https://api.whatsapp.com/send?phone=5493512430831&text=Tengo%20interés%20en%20realizar%20el%20programa%20online%20de%20Gestión%20de%20la%20Ansiedad" target="_blank" style="width:100%;height:100%;"></a>
-        </div>
+    
+    <section  class="section-extra-publi">
+            <div id="banner-publicitario-slider2" class="banner-publicitario-slider2 owl-carousel">
+                <a href="https://ayudaenlasemociones.com/campana" target="_blank" style="width:100%;height:100%;">
+                    <div class="zócalo-extra-publi1 text-center" ></div>
+                </a>
+                <!--<a href="https://api.whatsapp.com/send?phone=+5493512430831&text=Tengo%20interés%20en%20realizar%20el%20
+                        seminario%20actualiza%20tu%20mente" target="_blank" style="width:100%;height:100%;">
+                    <div class="zócalo-extra-publi2" loading="lazy"></div>   
+                </a>-->                
+         </div>  
     </section>
     <!--  -->
     <section class="section-bitacora">
         <div class="content">
             <div class="videos">
-                <h6 class="title">Bitácora del día</h6>
+                <h6 class="title">Nuevos videos</h6>
                 <div class="black-divider"></div>
-                <div id="bitacora-slider" class="bitacora-slider owl-carousel">
-                    <?php foreach($videos_cuarentena as $video) : ?>
+                <div class="CEEConsultorio">
+                    <?php foreach($phpOBJ['items'] as $key=>$value):  $url_video='https://www.youtube.com/embed/'.$value['id']['videoId'];?>
                         <div class="video">
-                            <iframe src="<?php echo $video['src'] ?>" height="490" width="280" allowfullscreen frameborder="0"></iframe>
+                            <iframe src="<?php echo  $url_video ?>"allowfullscreen frameborder="0"  loading="lazy"></iframe>
                             <div class="title-content">
-                                <p class="title"><?php echo $video['titulo'] ?></p>
-                            </div>
-                            <div class="description-content">
-                                <p class="description"><?php echo $video['descripcion'] ?></p>
+                                    <p class="title"><?php echo $value['snippet']['title'] ?></p> 
                             </div>
                         </div>
-                    <?php endforeach; ?>
+                    <?php endforeach; ?>	 
                 </div>
             </div>
             <div class="public">
-                <div class="box_1 background-overlay-light">
+            <div class="box_1 background-overlay-dark" >
                     <div class="text-content">
-                        <h5 class="title">Descarga nuestra revista mensual</h5>
-                        <hr>
-                        <a href="/descargas_online" class="btn btn-primary">Descargar</a>
+                        <h6 class="titulo1" >NUEVA SERIE EN YOUTUBE</h6>
+                        <h5 class="title">COMO EN EL</h5>
+                        <h5 class="title2">CONSULTORIO.</h5>
+                        <div class="btn btn-primary" >
+                            <div class="textoTransparente">SEBASTIAN PALERMO</div>
+                        </div>
+                        <a href= "https://www.youtube.com/watch?v=5DOtnJmmPoE&list=PLB9k3whCjl-LaVXKw2Jm-2MtdwKL0Dwiy" target= _blank 
+                            class="title3">CLICK AQUÍ</a>                       
                     </div>
                 </div>
                 <div class="box_2 background-overlay-light">
@@ -166,14 +239,14 @@
         </div>
     </section>
     <!--  -->
-    <section class="section-charlas">
+    <section class="section-charlas" >
         <div class="content">
             <div class="last-charlas-abiertas col-12 col-sm-9">
                 <h6 class="title">Charlas Abiertas</h6>
                 <div class="black-divider"></div>
                 <div id="last-charlas-abiertas-slider" class="last-charlas-abiertas-slider owl-carousel">
                     <?php foreach($ultimas_charlas as $charla) : ?>
-                        <div class="last-charla">
+                        <div class="last-charla"loading="lazy">
                             <a href="<?php echo $charla['video'] ?>" target="_blank">
                                 <img src="/img/charlas_abiertas/<?php echo $charla['imagen'] ?>" class="rounded">
                             </a>
@@ -188,7 +261,7 @@
                     <?php foreach($charlas_abiertas as $charla) : ?>
                         <div class="charla col-12 col-sm-6">
                             <a href="<?php echo $charla['video'] ?>" target="_blank" class="col-6">
-                                <img src="/img/charlas_abiertas/<?php echo $charla['imagen'] ?>" class="rounded">
+                                <img src="/img/charlas_abiertas/<?php echo $charla['imagen'] ?>" class="rounded" loading="lazy">
                             </a>
                             <div class="text-charla">
                                 <a href="<?php echo $charla['video'] ?>" target="_blank">
@@ -201,12 +274,12 @@
                 </div>
             </div>
             <div class="twitter-box scroller col-12 col-sm-3">
-                <a class="twitter-timeline" href="https://twitter.com/snpalermo?ref_src=twsrc%5Etfw">Tweets by snpalermo</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+                <a class="twitter-timeline" href="https://twitter.com/snpalermo?ref_src=twsrc%5Etfw" >Tweets by snpalermo</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
             </div>
         </div>
     </section>
     <!--  -->
-    <section class="section-campania-tienda">
+    <section class="section-campania-tienda" >
         <div class="content">
             <div class="campania-whatsapp">
                 <a href="#">
@@ -214,14 +287,14 @@
                     <img class="mobile" src="/img/index-img/publi-sebastian-mb.jpg" alt="Biografia Sebastian Imagen">
                 </a>
             </div>
-            <div class="tienda-online">
+            <div class="tienda-online"loading="lazy">
                 <a href="/descargas_online">
                     <img class="no-mobile" src="/img/index-img/publi-descargas.jpg" alt="Descargas Imagen">
                     <img class="mobile" src="/img/index-img/publi-descargas_mb.jpg" alt="Descargas Imagen">
                 </a>
             </div>
             <div class="recursos-cuarentena">
-                <div class="background-overlay-light">
+                <div class="background-overlay-light" loading="lazy">
                     <div class="texto-imagen">
                         <h5>Recursos</h5>
                         <h5><strong>Escritos</strong></h5>
@@ -235,7 +308,7 @@
     </section>
 
     <!-- ***** Footer Area Start ***** -->
-    <?php include('includes/footer.php');?>
+    <?php include('includes/footer.php'); ?>
     <!-- ***** Footer Area End ***** -->
 </body>
 
